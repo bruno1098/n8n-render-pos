@@ -16,11 +16,29 @@ services:
       - key: TZ
         value: America/Sao_Paulo
 
-      # ✅ Conexão via URL com SSL habilitado (método garantido)
-      - key: DB_POSTGRESDB_CONNECTION_STRING
-        value: postgresql://n8n:uJYxHmNwvQ5hf7FOP3grUtIRnp85ffqK@dpg-d20ja7be5dus73dfthhg-a.oregon-postgres.render.com/n8n_4ib5?ssl=true
+      # 🎯 Configuração de DB com SSL habilitado corretamente
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-d20ja7be5dus73dfthhg-a.oregon-postgres.render.com
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n_4ib5
+      - key: DB_POSTGRESDB_USER
+        value: n8n
+      - key: DB_POSTGRESDB_PASSWORD
+        value: uJYxHmNwvQ5hf7FOP3grUtIRnp85ffqK
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+      - key: DB_POSTGRESDB_SSL_ENABLED
+        value: "true"
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "false"
 
-
-      # ✅ Segurança de permissões do arquivo de config
+      # 🔐 Segurança e limpeza
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
-        value: true
+        value: "true"
+      - key: EXECUTIONS_DATA_PRUNE
+        value: "true"
+ 
