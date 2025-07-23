@@ -16,7 +16,7 @@ services:
       - key: TZ
         value: America/Sao_Paulo
 
-      # 🎯 Configuração de DB com SSL habilitado corretamente
+      # Banco com SSL ignorado
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
@@ -36,9 +36,10 @@ services:
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: "false"
 
-      # 🔐 Segurança e limpeza
+      # Passa o Node.js para ignorar erros de TLS
+      - key: NODE_TLS_REJECT_UNAUTHORIZED
+        value: "0"
+
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "true"
-      - key: EXECUTIONS_DATA_PRUNE
-        value: "true"
- 
+
