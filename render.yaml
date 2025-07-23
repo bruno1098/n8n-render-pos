@@ -31,9 +31,5 @@ services:
         value: uJYxHmNwvQ5hf7FOP3grUtIRnp85ffqK
       - key: DB_POSTGRESDB_SCHEMA
         value: public
-
-      # (Opcional – recomendado)
-      - key: EXECUTIONS_DATA_PRUNE
-        value: true
-      - key: EXECUTIONS_DATA_MAX_AGE
-        value: 168
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: false
