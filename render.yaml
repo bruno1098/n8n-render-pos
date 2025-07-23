@@ -16,30 +16,30 @@ services:
       - key: TZ
         value: America/Sao_Paulo
 
-      # Banco com SSL ignorado
+      # Variáveis corretas para banco PostgreSQL
       - key: DB_TYPE
         value: postgresdb
-      - key: DB_POSTGRESDB_HOST
+      - key: DB_POSTGRES_HOST
         value: dpg-d20ja7be5dus73dfthhg-a.oregon-postgres.render.com
-      - key: DB_POSTGRESDB_PORT
+      - key: DB_POSTGRES_PORT
         value: "5432"
-      - key: DB_POSTGRESDB_DATABASE
+      - key: DB_POSTGRES_DATABASE
         value: n8n_4ib5
-      - key: DB_POSTGRESDB_USER
+      - key: DB_POSTGRES_USER
         value: n8n
-      - key: DB_POSTGRESDB_PASSWORD
+      - key: DB_POSTGRES_PASSWORD
         value: uJYxHmNwvQ5hf7FOP3grUtIRnp85ffqK
-      - key: DB_POSTGRESDB_SCHEMA
+      - key: DB_POSTGRES_SCHEMA
         value: public
-      - key: DB_POSTGRESDB_SSL_ENABLED
+      - key: DB_POSTGRES_SSL_ENABLED
         value: "true"
-      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+      - key: DB_POSTGRES_SSL_REJECT_UNAUTHORIZED
         value: "false"
 
-      # Passa o Node.js para ignorar erros de TLS
+      # TLS: permite ignorar certificados autoassinados
       - key: NODE_TLS_REJECT_UNAUTHORIZED
         value: "0"
 
+      # Permissões do arquivo de configuração
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "true"
-
