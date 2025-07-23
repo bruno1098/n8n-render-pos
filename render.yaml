@@ -15,3 +15,25 @@ services:
         value: admin123
       - key: TZ
         value: America/Sao_Paulo
+
+      # 👇👇👇 Adicione estas abaixo 👇👇👇
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-d20ja7be5dus73dfthhg-a.oregon-postgres.render.com
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n_4ib5
+      - key: DB_POSTGRESDB_USER
+        value: n8n
+      - key: DB_POSTGRESDB_PASSWORD
+        value: uJYxHmNwvQ5hf7FOP3grUtIRnp85ffqK
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+
+      # (Opcional – recomendado)
+      - key: EXECUTIONS_DATA_PRUNE
+        value: true
+      - key: EXECUTIONS_DATA_MAX_AGE
+        value: 168
